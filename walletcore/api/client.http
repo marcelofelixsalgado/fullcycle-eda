@@ -1,0 +1,8 @@
+POST http://localhost:8080/transactions HTTP/1.1
+Content-Type: application/json
+
+{
+    "account_id_from": "8f11f884-1ec3-49e3-82c7-d51057983d83",
+    "account_id_to": "d81ecac7-9af9-4005-b58c-1fd51f6a4720",
+    "amount": 10
+}
