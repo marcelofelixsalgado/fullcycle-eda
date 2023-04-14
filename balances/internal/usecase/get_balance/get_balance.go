@@ -1,7 +1,7 @@
 package getbalance
 
 import (
-	"github.com.br/marcelofelixsalgado/fullcycle-eda/balances/internal/gateway"
+	"github.com/marcelofelixsalgado/fullcycle-eda/balances/internal/gateway"
 )
 
 type GetBalanceInputDTO struct {

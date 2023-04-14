@@ -3,8 +3,8 @@ package create_account
 import (
 	"testing"
 
-	"github.com.br/marcelofelixsalgado/fullcycle-eda/walletcore/internal/entity"
-	"github.com.br/marcelofelixsalgado/fullcycle-eda/walletcore/internal/usecase/mocks"
+	"github.com/marcelofelixsalgado/fullcycle-eda/walletcore/internal/entity"
+	"github.com/marcelofelixsalgado/fullcycle-eda/walletcore/internal/usecase/mocks"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 )

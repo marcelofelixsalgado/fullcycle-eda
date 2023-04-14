@@ -1,6 +1,6 @@
 package gateway
 
-import "github.com.br/marcelofelixsalgado/fullcycle-eda/balances/internal/entity"
+import "github.com/marcelofelixsalgado/fullcycle-eda/balances/internal/entity"
 
 type BalanceGateway interface {
 	Get(accountId string) (*entity.Balance, error)

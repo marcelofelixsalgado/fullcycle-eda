@@ -1,7 +1,7 @@
 package mocks
 
 import (
-	"github.com.br/marcelofelixsalgado/fullcycle-eda/walletcore/internal/entity"
+	"github.com/marcelofelixsalgado/fullcycle-eda/walletcore/internal/entity"
 	"github.com/stretchr/testify/mock"
 )
 

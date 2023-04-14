@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"net/http"
 
-	getbalance "github.com.br/marcelofelixsalgado/fullcycle-eda/balances/internal/usecase/get_balance"
 	"github.com/go-chi/chi/v5"
+	getbalance "github.com/marcelofelixsalgado/fullcycle-eda/balances/internal/usecase/get_balance"
 )
 
 type WebBalanceHandler struct {

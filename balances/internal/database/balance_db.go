@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"time"
 
-	"github.com.br/marcelofelixsalgado/fullcycle-eda/balances/internal/entity"
+	"github.com/marcelofelixsalgado/fullcycle-eda/balances/internal/entity"
 )
 
 type BalanceDB struct {

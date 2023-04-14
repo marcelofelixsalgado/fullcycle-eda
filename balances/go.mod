@@ -1,4 +1,4 @@
-module github.com.br/marcelofelixsalgado/fullcycle-eda/balances
+module github.com/marcelofelixsalgado/fullcycle-eda/balances
 
 go 1.20
 

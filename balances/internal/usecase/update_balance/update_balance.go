@@ -1,7 +1,7 @@
 package updatebalance
 
 import (
-	"github.com.br/marcelofelixsalgado/fullcycle-eda/balances/internal/gateway"
+	"github.com/marcelofelixsalgado/fullcycle-eda/balances/internal/gateway"
 )
 
 type UpdateBalanceInputDTO struct {

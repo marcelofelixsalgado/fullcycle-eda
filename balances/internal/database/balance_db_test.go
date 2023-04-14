@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"testing"
 
-	"github.com.br/marcelofelixsalgado/fullcycle-eda/balances/internal/entity"
+	"github.com/marcelofelixsalgado/fullcycle-eda/balances/internal/entity"
 	_ "github.com/mattn/go-sqlite3"
 	"github.com/stretchr/testify/suite"
 )

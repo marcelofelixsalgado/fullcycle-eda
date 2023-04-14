@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com.br/marcelofelixsalgado/fullcycle-eda/walletcore/internal/usecase/create_transaction"
+	"github.com/marcelofelixsalgado/fullcycle-eda/walletcore/internal/usecase/create_transaction"
 )
 
 type WebTransactionHandler struct {

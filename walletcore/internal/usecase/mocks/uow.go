@@ -3,7 +3,7 @@ package mocks
 import (
 	"context"
 
-	"github.com.br/marcelofelixsalgado/fullcycle-eda/walletcore/pkg/uow"
+	"github.com/marcelofelixsalgado/fullcycle-eda/walletcore/pkg/uow"
 	"github.com/stretchr/testify/mock"
 )
 

@@ -3,8 +3,8 @@ package updatebalance_test
 import (
 	"testing"
 
-	"github.com.br/marcelofelixsalgado/fullcycle-eda/balances/internal/entity"
-	updatebalance "github.com.br/marcelofelixsalgado/fullcycle-eda/balances/internal/usecase/update_balance"
+	"github.com/marcelofelixsalgado/fullcycle-eda/balances/internal/entity"
+	updatebalance "github.com/marcelofelixsalgado/fullcycle-eda/balances/internal/usecase/update_balance"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 )

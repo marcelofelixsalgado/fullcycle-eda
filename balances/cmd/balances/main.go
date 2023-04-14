@@ -5,12 +5,12 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com.br/marcelofelixsalgado/fullcycle-eda/balances/internal/database"
-	getbalance "github.com.br/marcelofelixsalgado/fullcycle-eda/balances/internal/usecase/get_balance"
-	updatebalance "github.com.br/marcelofelixsalgado/fullcycle-eda/balances/internal/usecase/update_balance"
-	"github.com.br/marcelofelixsalgado/fullcycle-eda/balances/internal/web"
-	"github.com.br/marcelofelixsalgado/fullcycle-eda/balances/internal/web/webserver"
-	"github.com.br/marcelofelixsalgado/fullcycle-eda/balances/pkg/kafka"
+	"github.com/marcelofelixsalgado/fullcycle-eda/balances/internal/database"
+	getbalance "github.com/marcelofelixsalgado/fullcycle-eda/balances/internal/usecase/get_balance"
+	updatebalance "github.com/marcelofelixsalgado/fullcycle-eda/balances/internal/usecase/update_balance"
+	"github.com/marcelofelixsalgado/fullcycle-eda/balances/internal/web"
+	"github.com/marcelofelixsalgado/fullcycle-eda/balances/internal/web/webserver"
+	"github.com/marcelofelixsalgado/fullcycle-eda/balances/pkg/kafka"
 
 	ckafka "github.com/confluentinc/confluent-kafka-go/kafka"
 	_ "github.com/go-sql-driver/mysql"

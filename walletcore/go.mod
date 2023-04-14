@@ -1,4 +1,4 @@
-module github.com.br/marcelofelixsalgado/fullcycle-eda/walletcore
+module github.com/marcelofelixsalgado/fullcycle-eda/walletcore
 
 go 1.19
 

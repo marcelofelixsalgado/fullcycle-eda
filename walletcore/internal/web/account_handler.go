@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com.br/marcelofelixsalgado/fullcycle-eda/walletcore/internal/usecase/create_account"
+	"github.com/marcelofelixsalgado/fullcycle-eda/walletcore/internal/usecase/create_account"
 )
 
 type WebAccountHandler struct {
