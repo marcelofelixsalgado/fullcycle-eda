@@ -3,19 +3,23 @@ version: '3'
 services:
   walletcore-app: 
     build: ./walletcore
-    entrypoint: dockerize -wait tcp://mysql-balances:3306 -timeout 30000s /app/balances
+    entrypoint: dockerize -wait tcp://mysql-walletcore:3306 -timeout 30000s /app/walletcore
     ports:
       - 3002:3002
     depends_on: 
        - mysql-walletcore
-
-  ballance-app: 
+    networks: 
+      - fullcycle-eda-network
+      
+  balance-app: 
     build: ./balances
     entrypoint: dockerize -wait tcp://mysql-balances:3306 -timeout 30000s /app/balances
     ports:
       - 3003:3003
     depends_on: 
        - mysql-balances
+    networks: 
+      - fullcycle-eda-network
 
   mysql-walletcore:
     image: mysql:5.7
@@ -26,7 +30,9 @@ services:
       - 3306:3306
     volumes:
       - .docker/mysql/walletcore:/var/lib/mysql
-      - ./walletcore/scripts/walletcore:/docker-entrypoint-initdb.d
+      - ./walletcore/scripts/database:/docker-entrypoint-initdb.d
+    networks: 
+      - fullcycle-eda-network
 
   mysql-balances:
     image: mysql:5.7
@@ -37,7 +43,9 @@ services:
       - 3307:3306
     volumes:
       - .docker/mysql/balances:/var/lib/mysql
-      - ./balances/scripts/balances:/docker-entrypoint-initdb.d      
+      - ./balances/scripts/database:/docker-entrypoint-initdb.d
+    networks: 
+      - fullcycle-eda-network
 
   zookeeper:
     image: "confluentinc/cp-zookeeper:6.1.0"
@@ -48,6 +56,8 @@ services:
       TZ: Sao_Paulo/Brazil
       ZOOKEEPER_CLIENT_PORT: 2181
       ZOOKEEPER_TICK_TIME: 2000
+    networks: 
+      - fullcycle-eda-network
 
   kafka:
     image: "confluentinc/cp-enterprise-kafka:6.1.0"
@@ -73,6 +83,8 @@ services:
       KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
       KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 100
       CONFLUENT_METRICS_ENABLE: 'false'
+    networks: 
+      - fullcycle-eda-network
 
   control-center:
     image: confluentinc/cp-enterprise-control-center:7.3.0
@@ -89,4 +101,10 @@ services:
       CONTROL_CENTER_MONITORING_INTERCEPTOR_TOPIC_PARTITIONS: 1
       CONFLUENT_METRICS_TOPIC_REPLICATION: 1
       PORT: 9021
-  
+    networks: 
+      - fullcycle-eda-network
+
+networks: 
+  fullcycle-eda-network:
+    name: fullcycle-eda-network
+    driver: bridge

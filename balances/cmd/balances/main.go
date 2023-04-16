@@ -32,7 +32,7 @@ func main() {
 	databaseConnectionUser := "root"
 	databaseConnectionPassword := "root"
 	databaseConnectionServerAddress := "mysql-balances"
-	databaseConnectionServerPort := 3307
+	databaseConnectionServerPort := 3306
 	databaseName := "balances"
 
 	connectionString := fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?charset=utf8&parseTime=True&loc=Local",
@@ -61,7 +61,7 @@ func main() {
 
 	topics := []string{"balances"}
 	configMap := ckafka.ConfigMap{
-		"bootstrap.servers": "kafka:9094",
+		"bootstrap.servers": "kafka:29092",
 		"group.id":          "wallet",
 		"auto.offset.reset": "earliest",
 	}
